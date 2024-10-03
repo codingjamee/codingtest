@@ -103,5 +103,7 @@ let prices = Object.fromEntries([
   ["meat", 4],
 ]);
 
-alert(prices.orange);
+console.log(prices); // {banana: 1, orange: 2, meat: 4}
+
+alert(prices.orange); //2
 ```
