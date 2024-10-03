@@ -107,3 +107,27 @@ console.log(prices); // {banana: 1, orange: 2, meat: 4}
 
 alert(prices.orange); //2
 ```
+
+### 문제 풀어보기
+
+애너그램 걸러내기
+애너그램으로 만든 단어를 걸러내는 함수 aclean(arr)을 만들어보세요.
+
+```js
+let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+alert(aclean(arr)); // "nap,teachers,ear"나 "PAN,cheaters,era"이 출력되어야 합니다.
+```
+
+```js
+const aclean = (arr) => {
+  const map = new Map();
+
+  arr.forEach((string) => {
+    const sortedString = string.toLowerCase().split("").sort().join("");
+    map.set(sortedString, string);
+  });
+
+  return Array.from(map.values());
+};
+```
